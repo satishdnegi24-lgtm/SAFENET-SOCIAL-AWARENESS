@@ -1,0 +1,177 @@
+import { ReportingIssueGuide } from '../types';
+
+export const REPORTING_ISSUES: ReportingIssueGuide[] = [
+  {
+    id: 'financial-fraud',
+    name: 'Financial Cyber Fraud & UPI Scams',
+    iconName: 'CreditCard',
+    shortDescription: 'Unauthorized bank withdrawals, UPI phishing, fake QR code payments, and task scams.',
+    immediateSafetySteps: [
+      'Immediately call the National Cyber Crime Helpline at 1930 within the "Golden Hour" (first 2 hours).',
+      'Contact your bank\'s 24/7 fraud helpline to block your debit/credit card, freeze net banking, and request a transaction dispute recall.',
+      'Take unedited screenshots of the fraudulent transaction SMS, UPI reference ID (UTR number), and beneficiary account details.',
+      'Do not format your phone or delete the payment app, as transaction logs and device metadata are required for evidence.',
+    ],
+    evidencePreservationChecklist: [
+      'Bank statement showing the debit with 12-digit UTR (Unique Transaction Reference) number',
+      'Screenshot of the SMS notification received from the bank',
+      'Sender UPI VPA address or bank account number of the recipient',
+      'Chat history or call logs with the scammer with exact timestamps',
+    ],
+    platformReportingSteps: [
+      { platform: 'Google Pay / PhonePe / Paytm', steps: 'Open transaction details -> Tap "Having issues with this payment?" -> Select "Report fraud".', link: 'https://support.google.com/pay/india' },
+      { platform: 'WhatsApp', steps: 'If payment was solicited in chat: Tap contact name -> Report contact -> Check "Block contact and report".', link: 'https://faq.whatsapp.com' },
+    ],
+    formalComplaintRoute: {
+      portalName: 'National Cyber Crime Reporting Portal (Financial Fraud Section)',
+      portalUrl: 'https://cybercrime.gov.in',
+      helpline: '1930 (Toll-Free, 24/7 Citizen Financial Cyber Fraud Helpline)',
+      applicableLegalCategory: 'Financial Cyber Fraud / Section 66D IT Act (Cheating by personation)',
+      importantDisclaimer: 'SafeNet is an educational guidance directory and does NOT file complaints on your behalf. You must personally dial 1930 or submit details on cybercrime.gov.in.',
+    },
+  },
+  {
+    id: 'deepfake-abuse',
+    name: 'Deepfake & Non-Consensual Synthetic Media',
+    iconName: 'Camera',
+    shortDescription: 'AI-generated manipulated videos, face swaps, synthetic intimate imagery, and voice clones.',
+    immediateSafetySteps: [
+      'Do not forward, download, or repost the media even to ask others for verification.',
+      'Copy the exact permanent URL of the post, reel, or thread where the media is hosted.',
+      'Preserve full uncropped screenshots of the post displaying the uploader\'s handle and timestamps.',
+      'Request immediate takedown through the platform\'s non-consensual imagery reporting channel.',
+    ],
+    evidencePreservationChecklist: [
+      'Direct URL link to the offending video or image post',
+      'Screenshot of the uploader\'s profile and caption text',
+      'Date and exact timestamp when you first noticed the content',
+      'If available, link to the authentic source material used to generate the synthetic media',
+    ],
+    platformReportingSteps: [
+      { platform: 'Instagram / Facebook', steps: 'Tap (...) on post -> Report -> "Nudity or sexual activity" or "Bullying or harassment" -> "It\'s someone I know".', link: 'https://help.instagram.com' },
+      { platform: 'X (Twitter)', steps: 'Tap (...) -> Report post -> "Non-consensual nudity" or "Synthetic and manipulated media".', link: 'https://help.twitter.com' },
+      { platform: 'StopNCII.org', steps: 'Create an anonymous cryptographic hash of your intimate photos to prevent automated platform distribution.', link: 'https://stopncii.org' },
+    ],
+    formalComplaintRoute: {
+      portalName: 'Cyber Crime Portal — Report Cyber Crime Against Women & Children',
+      portalUrl: 'https://cybercrime.gov.in',
+      helpline: '1930 (General Cyber Assistance) / 112 (Immediate Distress)',
+      applicableLegalCategory: 'Section 66E (Privacy Violation) & Section 67/67A IT Act, Section 79 BNS',
+      importantDisclaimer: 'Under Indian IT Rules 2021, social media intermediaries are mandated to act on non-consensual synthetic content within 24–36 hours of official receipt.',
+    },
+  },
+  {
+    id: 'impersonation-cloning',
+    name: 'Identity Impersonation & Cloned Profiles',
+    iconName: 'UserX',
+    shortDescription: 'Accounts created using your name, photos, and likeness to solicit money or defame you.',
+    immediateSafetySteps: [
+      'Post a clear advisory story on your genuine account warning friends not to accept requests or transfer money to the fake account.',
+      'Do not direct message the fake account or pay them to remove it.',
+      'Copy the exact profile URL of the cloned account.',
+      'Have multiple mutual friends report the account simultaneously using the platform\'s impersonation workflow.',
+    ],
+    evidencePreservationChecklist: [
+      'URL of the imposter account and exact username handle',
+      'Side-by-side screenshots showing your genuine profile and the cloned profile',
+      'Screenshots of any fraudulent messages sent by the clone soliciting money or links',
+    ],
+    platformReportingSteps: [
+      { platform: 'Instagram', steps: 'Go to profile -> Tap (...) -> Report -> "It\'s pretending to be someone else" -> "Me".', link: 'https://help.instagram.com' },
+      { platform: 'Facebook', steps: 'Go to profile -> Tap (...) below cover photo -> Find support or report profile -> Fake account.', link: 'https://www.facebook.com/help' },
+      { platform: 'WhatsApp', steps: 'Open chat -> Tap contact name -> Report contact -> Check "Block and report".', link: 'https://faq.whatsapp.com' },
+    ],
+    formalComplaintRoute: {
+      portalName: 'National Cyber Crime Reporting Portal (Identity Theft & Impersonation)',
+      portalUrl: 'https://cybercrime.gov.in',
+      helpline: '1930',
+      applicableLegalCategory: 'Section 66C (Identity Theft) & Section 66D (Cheating by Personation) IT Act',
+      importantDisclaimer: 'Platform reporting usually resolves identity cloning faster than legal filing. Use formal police filing if the impersonator is extorting money or circulating illegal content.',
+    },
+  },
+  {
+    id: 'cyberbullying-harassment',
+    name: 'Cyberbullying, Stalking & Online Harassment',
+    iconName: 'ShieldAlert',
+    shortDescription: 'Repeated offensive messages, confession page defamation, threats, and coordinated trolling.',
+    immediateSafetySteps: [
+      'Do not engage in arguments or send reciprocal insults in public or private.',
+      'Take complete, unedited screenshots with date and time clearly visible.',
+      'Use platform "Restrict" or "Mute" tools to protect your mental wellbeing without alerting the harasser.',
+      'Confide in a trusted mentor, teacher, parent, or college grievance cell.',
+    ],
+    evidencePreservationChecklist: [
+      'Full-screen captures showing account handles, timestamps, and offensive messages',
+      'URLs to comments, posts, or stories',
+      'Group chat member list if harassment occurred in a multi-user group',
+    ],
+    platformReportingSteps: [
+      { platform: 'Instagram', steps: 'Tap and hold comment or message -> Tap exclamation/report icon -> "Bullying or harassment".', link: 'https://help.instagram.com' },
+      { platform: 'X (Twitter)', steps: 'Tap (...) on tweet -> Report post -> "Abuse and harassment".', link: 'https://help.twitter.com' },
+    ],
+    formalComplaintRoute: {
+      portalName: 'National Cyber Crime Reporting Portal (Other Cyber Crime)',
+      portalUrl: 'https://cybercrime.gov.in',
+      helpline: '1930 / Women Helpline 1091 / Emergency 112',
+      applicableLegalCategory: 'Section 354D IPC / Section 78 BNS (Stalking), Section 66E IT Act',
+      importantDisclaimer: 'For immediate physical threats or stalking danger, contact local emergency services via 112 immediately.',
+    },
+  },
+  {
+    id: 'hacked-account',
+    name: 'Hacked / Compromised Social Media Account',
+    iconName: 'KeyRound',
+    shortDescription: 'Unauthorized login, altered password/email, or spam messages sent from your profile.',
+    immediateSafetySteps: [
+      'If still logged in on one device: Change your password immediately and select "Log out of all other sessions".',
+      'Check Accounts Center -> Personal details -> Ensure your email and phone number were not replaced with the hacker\'s.',
+      'Enable Two-Factor Authentication via an Authenticator App and save backup recovery codes.',
+      'If completely locked out: Use the official platform recovery portal from a device you previously used regularly.',
+    ],
+    evidencePreservationChecklist: [
+      'Screenshots of emails received from security@mail.instagram.com or security@facebookmail.com notifying of password/email change',
+      'Screenshot of the unrecognized login location in Login Activity',
+      'Your original registered phone number and email account statements',
+    ],
+    platformReportingSteps: [
+      { platform: 'Instagram Recovery', steps: 'Visit instagram.com/hacked -> Select "My account was hacked" -> Follow video selfie verification steps.', link: 'https://instagram.com/hacked' },
+      { platform: 'Facebook Recovery', steps: 'Visit facebook.com/hacked -> Select "Someone else got into my account" -> Follow identity check.', link: 'https://facebook.com/hacked' },
+      { platform: 'WhatsApp Hijack', steps: 'Re-register your phone number on WhatsApp and enter the 6-digit SMS code to disconnect the unauthorized session.', link: 'https://faq.whatsapp.com' },
+    ],
+    formalComplaintRoute: {
+      portalName: 'National Cyber Crime Reporting Portal (Unauthorized Access / Hacking)',
+      portalUrl: 'https://cybercrime.gov.in',
+      helpline: '1930',
+      applicableLegalCategory: 'Section 43 & Section 66 IT Act (Hacking with Computer System)',
+      importantDisclaimer: 'Beware of third-party "hackers" on Instagram or Telegram who claim they can recover your account for a fee; 100% of these are secondary advance-fee scams.',
+    },
+  },
+  {
+    id: 'phishing-scams',
+    name: 'Phishing Links, Job Scams & Fake Portals',
+    iconName: 'Link',
+    shortDescription: 'Deceptive login links, malicious APK files, and fraudulent task-investment schemes.',
+    immediateSafetySteps: [
+      'Never enter your password, PIN, or OTP on the suspect page.',
+      'If you accidentally submitted credentials: Open the legitimate app immediately and change your password.',
+      'If you downloaded an APK file: Delete it immediately from your "Downloads" folder and do NOT install it. Run a device security scan.',
+      'Report the phishing link to Google Safe Browsing and platform moderators.',
+    ],
+    evidencePreservationChecklist: [
+      'Full website URL as shown in your browser address bar',
+      'Screenshot of the phishing website page',
+      'Message text and sender number/email that delivered the link',
+    ],
+    platformReportingSteps: [
+      { platform: 'Google Safe Browsing', steps: 'Submit malicious phishing URL for global browser blocking.', link: 'https://safebrowsing.google.com/safebrowsing/report_phish/' },
+      { platform: 'CERT-In Incident Report', steps: 'Report computer security incidents and malicious URLs.', link: 'https://www.cert-in.org.in' },
+    ],
+    formalComplaintRoute: {
+      portalName: 'National Cyber Crime Reporting Portal (Online Phishing & Scams)',
+      portalUrl: 'https://cybercrime.gov.in',
+      helpline: '1930',
+      applicableLegalCategory: 'Section 66D IT Act (Cheating by personation using computer resource)',
+      importantDisclaimer: 'Always verify domain spelling before submitting sensitive details.',
+    },
+  },
+];

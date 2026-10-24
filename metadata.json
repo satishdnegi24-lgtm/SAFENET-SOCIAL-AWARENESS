@@ -1,0 +1,6 @@
+{
+  "name": "SafeNet — Think Before You Click",
+  "description": "Stay Safe. Protect Your Privacy. Own Your Digital Footprint. A comprehensive cyber safety education platform teaching social media safety, digital footprint awareness, deepfake recognition, and official reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
